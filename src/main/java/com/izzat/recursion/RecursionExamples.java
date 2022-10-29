@@ -5,8 +5,7 @@ public class RecursionExamples {
     public static void main(String[] args) {
         //lessThan(5);
 
-        System.out.println(powerOfTwo(3));
-        System.out.println(powerOfTwoIT(3));
+        System.out.println(FibonacciNumbers.fibonacciSequence(5));
     }
 
     //approach 1
