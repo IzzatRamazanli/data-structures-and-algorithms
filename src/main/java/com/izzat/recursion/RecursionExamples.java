@@ -23,8 +23,9 @@ public class RecursionExamples {
     public static void lessThan(int num) {
         if (num < 1) System.out.println("Number less than 1");
         else {
-            System.out.println(num);
+            //System.out.println(num); 5 4 3 2 1
             lessThan(num - 1);
+            System.out.println(num); // 1 2 3 4 5
         }
     }
 }
