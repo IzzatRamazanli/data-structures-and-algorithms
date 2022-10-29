@@ -3,11 +3,11 @@ package com.izzat.recursion;
 public class FactorialProblem {
 
     public static void main(String[] args) {
-        System.out.println(factorialRecursive(12));
+        System.out.println(factorialRecursive(10));
     }
 
     public static long factorialRecursive(int num) {
-        if (num == 0) return 1;
+        if (num == 0 || num == 1) return 1;
         else {
             return num * factorialRecursive(num - 1);
         }
