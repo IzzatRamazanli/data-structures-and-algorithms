@@ -38,7 +38,7 @@ public class RecursionExamples {
     public static int powerOfTwo(int num) {
         if (num == 0) return 1;
         else {
-            int power = 2*powerOfTwo(num-1);
+            int power = 2 * powerOfTwo(num - 1);
             return power;
         }
     }
