@@ -3,7 +3,10 @@ package com.izzat.recursion;
 
 public class RecursionExamples {
     public static void main(String[] args) {
-        lessThan(5);
+        //lessThan(5);
+
+        System.out.println(powerOfTwo(3));
+        System.out.println(powerOfTwoIT(3));
     }
 
     //approach 1
@@ -27,5 +30,27 @@ public class RecursionExamples {
             lessThan(num - 1);
             System.out.println(num); // 1 2 3 4 5
         }
+    }
+
+    // Iterative approach versus recursive approach
+
+    //1) Recursive solution
+    public static int powerOfTwo(int num) {
+        if (num == 0) return 1;
+        else {
+            int power = 2*powerOfTwo(num-1);
+            return power;
+        }
+    }
+
+    //2) Iterative solution
+    public static int powerOfTwoIT(int num) {
+        int inc = 0;
+        int power = 1;
+        while (num > inc) {
+            power = power * 2;
+            inc++;
+        }
+        return power;
     }
 }
