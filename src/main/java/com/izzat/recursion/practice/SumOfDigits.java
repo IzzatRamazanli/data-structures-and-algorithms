@@ -2,8 +2,7 @@ package com.izzat.recursion.practice;
 
 public class SumOfDigits {
 
-    //iterative approach
-    public static int iterativeCalculation(int number) {
+    public static int iterativeSum(int number) {
         if (number < 0) return -1;
         int sum = 0;
         for (int i = number; i > 0; i /= 10) {
@@ -12,11 +11,10 @@ public class SumOfDigits {
         return sum;
     }
 
-    //recursive approach
-    public static int recursiveCalculation(int number) {
+    public static int recursiveSum(int number) {
         if (number < 0) return -1;
         if (number == 0) return number;
-        return number % 10 + recursiveCalculation(number / 10);
+        return number % 10 + recursiveSum(number / 10);
     }
 
 }
