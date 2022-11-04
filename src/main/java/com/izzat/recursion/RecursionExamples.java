@@ -4,8 +4,16 @@ package com.izzat.recursion;
 public class RecursionExamples {
     public static void main(String[] args) {
         //lessThan(5);
+    }
 
-        System.out.println(FibonacciNumbers.fibonacciSequence(5));
+    //iterative approach
+    public boolean isPalindrome(String txt) {
+        String[] test = txt.split("");
+        StringBuilder check = new StringBuilder();
+        for (int i = test.length - 1; i >= 0; i--) {
+            check.append(test[i]);
+        }
+        return check.toString().equals(txt);
     }
 
     //approach 1
