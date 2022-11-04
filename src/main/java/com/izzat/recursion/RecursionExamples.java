@@ -4,16 +4,35 @@ package com.izzat.recursion;
 public class RecursionExamples {
     public static void main(String[] args) {
         //lessThan(5);
+        int num = 1001;
+
     }
 
+
+
     //iterative approach
-    public boolean isPalindrome(String txt) {
+
+    //text
+    public static boolean isPalindrome(String txt) {
         String[] test = txt.split("");
         StringBuilder check = new StringBuilder();
         for (int i = test.length - 1; i >= 0; i--) {
             check.append(test[i]);
         }
         return check.toString().equals(txt);
+    }
+
+    //numbers
+    public static boolean isPalindrome(int num) {
+        int remainder;
+        int result = 0;
+
+        for (int x = num; x > 0; x /= 10) {
+            remainder = x % 10;
+            result *= 10;
+            result = result + remainder;
+        }
+        return result == num;
     }
 
     //approach 1
