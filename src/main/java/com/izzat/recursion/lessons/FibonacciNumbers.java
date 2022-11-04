@@ -1,4 +1,4 @@
-package com.izzat.recursion;
+package com.izzat.recursion.lessons;
 
 public class FibonacciNumbers {
 

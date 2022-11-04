@@ -1,16 +1,13 @@
-package com.izzat.recursion;
+package com.izzat.recursion.lessons;
 
 
 public class RecursionExamples {
     public static void main(String[] args) {
         //lessThan(5);
-        int num = 1001;
 
     }
 
-
-
-    //iterative approach
+    //iterative approach for palindrome check
 
     //text
     public static boolean isPalindrome(String txt) {
@@ -26,7 +23,6 @@ public class RecursionExamples {
     public static boolean isPalindrome(int num) {
         int remainder;
         int result = 0;
-
         for (int x = num; x > 0; x /= 10) {
             remainder = x % 10;
             result *= 10;
