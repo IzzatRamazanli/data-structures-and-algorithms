@@ -19,7 +19,9 @@ class Student {
 }
 
 public class StudentGrades {
+
     public static void main(String[] args) {
+
         Student student1 = new Student(1, 90);
         Student student2 = new Student(2, 80);
         Student student3 = new Student(3, 100);
