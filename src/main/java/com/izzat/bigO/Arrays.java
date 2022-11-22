@@ -18,6 +18,9 @@ public class Arrays {
             }
         }//O(n)
 
+        //1 - retrieve by known index - O(1) constant
+        //2  - retrieve by unknown index - O(n) linear
+
         System.out.println("index: " + index);
     }
 }
