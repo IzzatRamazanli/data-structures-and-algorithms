@@ -1,4 +1,4 @@
-package com.izzat.sorting;
+package com.izzat.sorting.bucketsort;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +22,7 @@ public class BucketSort {
 
         ArrayList<Integer> helper = new ArrayList<>();
         buckets.forEach(x -> helper.addAll(x.getList()));
+
         for (int i = 0; i < helper.size(); i++) {
             arr[i] = helper.get(i);
         }

@@ -1,4 +1,4 @@
-package com.izzat.sorting;
+package com.izzat.sorting.bucketsort;
 
 import java.util.ArrayList;
 import java.util.Comparator;

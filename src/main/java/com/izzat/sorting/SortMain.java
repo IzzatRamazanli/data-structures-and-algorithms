@@ -1,5 +1,7 @@
 package com.izzat.sorting;
 
+import com.izzat.sorting.bucketsort.BucketSort;
+
 import java.util.Arrays;
 
 public class SortMain {
@@ -8,7 +10,7 @@ public class SortMain {
         //1 . int[] sortedArr = BubbleSort.bubbleSort(arr);
         //2 . int[] sortedArr = SelectionSort.selectionSort(arr);
         //3 .int[] sortedArr = InsertionSort.insertionSort(arr);
-        int[] sortedArr = InsertionSort.insertionSort(arr);
+        int[] sortedArr = BucketSort.bucketSort(arr);
         System.out.println(Arrays.toString(sortedArr));
     }
 }
