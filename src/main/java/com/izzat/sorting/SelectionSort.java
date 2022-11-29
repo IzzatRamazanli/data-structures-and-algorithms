@@ -10,7 +10,6 @@ public class SelectionSort {
             }
             if (minimumIndex != i) {
                 Swapper.swap(arr, i, minimumIndex);
-
                 /*
                   int temp = a[i];
                   a[i] = a[minimumIndex];
