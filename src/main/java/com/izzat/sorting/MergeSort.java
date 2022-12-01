@@ -1,7 +1,7 @@
 package com.izzat.sorting;
 
 public class MergeSort {
-    public static void merge(int[] arr, int left, int middle, int right) {
+    private static void merge(int[] arr, int left, int middle, int right) {
 
         int[] leftTempArr = new int[middle - left + 2];
         int[] rightTempArr = new int[right - middle + 1];

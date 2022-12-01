@@ -12,7 +12,8 @@ public class SortMain {
         //3 .int[] sortedArr = InsertionSort.insertionSort(arr);
         //int[] sortedArr = BucketSort.bucketSort(arr);
         //int[] sortedArr = InsertionSort.insertionSort(arr);
-        MergeSort.mergeSort(arr, 0, arr.length - 1);
+        //MergeSort.mergeSort(arr, 0, arr.length - 1);
+        MergeSort2.mergeSort(arr,0, arr.length);
         //System.out.println(Arrays.toString(sortedArr));
         System.out.println(Arrays.toString(arr));
     }
