@@ -9,7 +9,7 @@ public class MergeSort2 {
         merge(arr, start, mid, end);
     }
 
-    public static void merge(int[] arr, int start, int mid, int end) {
+    private static void merge(int[] arr, int start, int mid, int end) {
         if (arr[mid - 1] <= arr[mid]) return;
         int i = start;
         int j = mid;
