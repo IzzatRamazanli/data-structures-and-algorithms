@@ -7,7 +7,7 @@ public class BinarySearch {
         int middle = (start + end) / 2;
         System.out.printf("%d %d %d%n", start, middle, end);
 
-        while (arr[middle] != value) {
+        while (arr[middle] != value && start <= end) {
             if (value < arr[middle]) {
                 end = middle - 1;
             } else start = middle + 1;
@@ -15,6 +15,7 @@ public class BinarySearch {
             middle = (start + end) / 2;
             System.out.printf("%d %d %d%n", start, middle, end);
         }
-        return middle;
+        if (arr[middle] == value) return middle;
+        return -1;
     }
 }
