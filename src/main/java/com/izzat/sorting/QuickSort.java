@@ -5,11 +5,14 @@ public class QuickSort {
         //This is using the last element as pivot
 
         int pivot = arr[end];
-        int i = start - 1;
+        int i = start - 1; //take into account 0 index, cause using inside loop
         for (int j = start; j <= end; j++) {
             if (arr[j] <= pivot) {
                 i++;
-                Swapper.swap(arr, i, j);
+                //Swapper.swap(arr, i, j);
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
         return i;
