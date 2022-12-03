@@ -13,7 +13,8 @@ public class SortMain {
         //int[] sortedArr = BucketSort.bucketSort(arr);
         //MergeSort.mergeSort(arr, 0, arr.length - 1);
         //MergeSort2.mergeSort(arr,0, arr.length);
-        QuickSort.quickSort(arr, 0, arr.length - 1);
+        //QuickSort.quickSort(arr, 0, arr.length - 1);
+        QuickSort2.quickSort(arr, 0, arr.length);
         //System.out.println(Arrays.toString(sortedArr));
         System.out.println(Arrays.toString(arr));
     }
