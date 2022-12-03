@@ -2,6 +2,7 @@ package com.izzat.graph.list;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class GraphForList {
     ArrayList<GraphNodeList> graphNodes;
@@ -22,9 +23,25 @@ public class GraphForList {
         queue.add(node);
         while (!queue.isEmpty()) {
             GraphNodeList currentNode = queue.remove(0);
-            node.isVisited = true;
+            currentNode.isVisited = true;
             System.out.println(currentNode.name + " ");
-            node.neighbours.forEach(neighbour -> {
+            currentNode.neighbours.forEach(neighbour -> {
+                if (!neighbour.isVisited) {
+                    queue.add(neighbour);
+                    neighbour.isVisited = true;
+                }
+            });
+        }
+    }
+
+    private void bfsVisit2(GraphNodeList node) {
+        Queue<GraphNodeList> queue = new LinkedList<>();
+        queue.add(node);
+        while (!queue.isEmpty()) {
+            GraphNodeList currentNode = queue.poll();
+            currentNode.isVisited = true;
+            System.out.println(currentNode.name + " ");
+            currentNode.neighbours.forEach(neighbour -> {
                 if (!neighbour.isVisited) {
                     queue.add(neighbour);
                     neighbour.isVisited = true;
@@ -35,7 +52,7 @@ public class GraphForList {
 
     public void bfs() {
         graphNodes.forEach(node -> {
-            if (!node.isVisited) bfsVisit(node);
+            if (!node.isVisited) bfsVisit2(node);
         });
     }
 
