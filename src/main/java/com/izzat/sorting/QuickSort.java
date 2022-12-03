@@ -2,10 +2,12 @@ package com.izzat.sorting;
 
 public class QuickSort {
     public static int partition(int[] arr, int start, int end) {
-        int pivot = end;
+        //This is using the last element as pivot
+
+        int pivot = arr[end];
         int i = start - 1;
         for (int j = start; j <= end; j++) {
-            if (arr[j] <= arr[pivot]) {
+            if (arr[j] <= pivot) {
                 i++;
                 Swapper.swap(arr, i, j);
             }
