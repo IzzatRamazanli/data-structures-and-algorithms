@@ -1,7 +1,6 @@
-package com.izzat.graph;
+package com.izzat.graph.matrix;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Graph {
     ArrayList<GraphNode> graphNodes;

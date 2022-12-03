@@ -1,10 +1,11 @@
-package com.izzat.graph;
+package com.izzat.graph.list;
 
 import java.util.ArrayList;
 
-public class AdjacencyMatrix {
+public class AdjacencyList {
     public static void main(String[] args) {
         ArrayList<GraphNode> graphNodes = new ArrayList<>();
+
         graphNodes.add(new GraphNode("A", 0));
         graphNodes.add(new GraphNode("B", 1));
         graphNodes.add(new GraphNode("C", 2));
@@ -20,7 +21,5 @@ public class AdjacencyMatrix {
         graph.addUndirectedEdge(3, 4);
 
         System.out.println(graph);
-
-
     }
 }

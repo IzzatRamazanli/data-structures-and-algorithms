@@ -1,4 +1,4 @@
-package com.izzat.graph;
+package com.izzat.graph.matrix;
 
 public class GraphNode {
     public String name;
