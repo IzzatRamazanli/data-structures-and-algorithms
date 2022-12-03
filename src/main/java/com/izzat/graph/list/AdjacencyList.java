@@ -21,5 +21,7 @@ public class AdjacencyList {
         graph.addUndirectedEdge(3, 4);
 
         System.out.println(graph);
+
+        graph.bfs();
     }
 }

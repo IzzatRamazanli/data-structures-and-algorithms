@@ -1,6 +1,7 @@
 package com.izzat.graph.list;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class GraphForList {
     ArrayList<GraphNodeList> graphNodes;
@@ -14,6 +15,28 @@ public class GraphForList {
         GraphNodeList second = graphNodes.get(j);
         first.neighbours.add(second);
         second.neighbours.add(first);
+    }
+
+    private void bfsVisit(GraphNodeList node) {
+        LinkedList<GraphNodeList> queue = new LinkedList<>();
+        queue.add(node);
+        while (!queue.isEmpty()) {
+            GraphNodeList currentNode = queue.remove(0);
+            node.isVisited = true;
+            System.out.println(currentNode.name + " ");
+            node.neighbours.forEach(neighbour -> {
+                if (!neighbour.isVisited) {
+                    queue.add(neighbour);
+                    neighbour.isVisited = true;
+                }
+            });
+        }
+    }
+
+    public void bfs() {
+        graphNodes.forEach(node -> {
+            if (!node.isVisited) bfsVisit(node);
+        });
     }
 
 

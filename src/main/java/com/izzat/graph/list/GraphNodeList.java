@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class GraphNodeList {
     public String name;
     public int index;
+    public boolean isVisited = false;
 
     public ArrayList<GraphNodeList> neighbours;
 
@@ -12,5 +13,10 @@ public class GraphNodeList {
         this.name = name;
         this.index = index;
         neighbours = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return "GraphNodeList{name='%s', index=%d, isVisited=%s}".formatted(name, index, isVisited);
     }
 }
