@@ -2,16 +2,16 @@ package com.izzat.graph.list;
 
 import java.util.ArrayList;
 
-public class Graph {
-    ArrayList<GraphNode> graphNodes;
+public class GraphForList {
+    ArrayList<GraphNodeList> graphNodes;
 
-    public Graph(ArrayList<GraphNode> graphNodes) {
+    public GraphForList(ArrayList<GraphNodeList> graphNodes) {
         this.graphNodes = graphNodes;
     }
 
     public void addUndirectedEdge(int i, int j) {
-        GraphNode first = graphNodes.get(i);
-        GraphNode second = graphNodes.get(j);
+        GraphNodeList first = graphNodes.get(i);
+        GraphNodeList second = graphNodes.get(j);
         first.neighbours.add(second);
         second.neighbours.add(first);
     }
