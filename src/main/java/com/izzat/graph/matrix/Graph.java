@@ -53,6 +53,33 @@ public class Graph {
         });
     }
 
+    private void pathPrint(GraphNodeMatrix node) {
+        if (node.parent != null) {
+            pathPrint(node.parent);
+        }
+        System.out.print(node.name + " ");
+    }
+
+    public void BFSForShortPath(GraphNodeMatrix node) {
+        LinkedList<GraphNodeMatrix> queue = new LinkedList<>();
+        queue.add(node);
+        while (!queue.isEmpty()) {
+            GraphNodeMatrix currentNode = queue.remove(0);
+            currentNode.isVisited = true;
+            System.out.print("Printing path for node " + currentNode.name + ": ");
+            pathPrint(currentNode);
+            System.out.println();
+            List<GraphNodeMatrix> neighbours = getNeighbours(currentNode);
+            neighbours.forEach(neighbour -> {
+                if (!neighbour.isVisited) {
+                    neighbour.isVisited = true;
+                    neighbour.parent = currentNode;
+                    queue.add(neighbour);
+                }
+            });
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder graph = new StringBuilder();

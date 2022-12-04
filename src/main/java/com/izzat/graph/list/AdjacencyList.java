@@ -30,7 +30,7 @@ public class AdjacencyList {
 
     }
 
-    private static void GraphExample1() {
+    private static void graphExample1() {
         ArrayList<GraphNodeList> graphNodes = new ArrayList<>();
 
         graphNodes.add(new GraphNodeList("A", 0));

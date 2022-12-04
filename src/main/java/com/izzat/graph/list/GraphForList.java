@@ -56,14 +56,14 @@ public class GraphForList {
 
     //single source short path algorithms
 
-    public void pathPrint(GraphNodeList node) {
+    private void pathPrint(GraphNodeList node) {
         if (node.parent != null) {
             pathPrint(node.parent);
         }
         System.out.print(node.name + " ");
     }
 
-    public void pathPrintSpecific(GraphNodeList node) {
+    private void pathPrintSpecific(GraphNodeList node) {
         if (node.parent != null) {
             pathPrint(node.parent);
         }
