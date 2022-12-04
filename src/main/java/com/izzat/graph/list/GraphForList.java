@@ -56,6 +56,33 @@ public class GraphForList {
         });
     }
 
+    //single source short path algorithms
+
+    public void pathPrint(GraphNodeList node) {
+        if (node.parent != null) {
+            pathPrint(node.parent);
+        }
+        System.out.print(node.name + " ");
+    }
+
+    public void BFSForShortPath(GraphNodeList node) {
+        LinkedList<GraphNodeList> queue = new LinkedList<>();
+        queue.add(node);
+        while (!queue.isEmpty()) {
+            GraphNodeList currentNode = queue.remove(0);
+            currentNode.isVisited = true;
+            System.out.print("Printing path for node " + currentNode.name + ": ");
+            pathPrint(currentNode);
+            System.out.println();
+            currentNode.neighbours.forEach(neighbour -> {
+                if (!neighbour.isVisited) {
+                    neighbour.parent = currentNode;
+                    neighbour.isVisited = true;
+                    queue.add(neighbour);
+                }
+            });
+        }
+    }
 
     @Override
     public String toString() {
