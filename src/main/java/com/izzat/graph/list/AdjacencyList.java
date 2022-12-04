@@ -25,7 +25,9 @@ public class AdjacencyList {
         graph.addUndirectedEdge(4, 5);
         graph.addUndirectedEdge(5, 6);
         System.out.println(graph);
-        graph.BFSForShortPath(graphNodes.get(0));
+        //graph.BFSForShortPath(graphNodes.get(0));
+        graph.BFSForShortPathSpecific(graphNodes.get(0), graphNodes.get(6));
+
     }
 
     private static void GraphExample1() {

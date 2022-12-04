@@ -1,8 +1,6 @@
 package com.izzat.graph.list;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class GraphForList {
     ArrayList<GraphNodeList> graphNodes;
@@ -65,6 +63,13 @@ public class GraphForList {
         System.out.print(node.name + " ");
     }
 
+    public void pathPrintSpecific(GraphNodeList node) {
+        if (node.parent != null) {
+            pathPrint(node.parent);
+        }
+        System.out.print(node.name + " ");
+    }
+
     public void BFSForShortPath(GraphNodeList node) {
         LinkedList<GraphNodeList> queue = new LinkedList<>();
         queue.add(node);
@@ -74,6 +79,28 @@ public class GraphForList {
             System.out.print("Printing path for node " + currentNode.name + ": ");
             pathPrint(currentNode);
             System.out.println();
+            currentNode.neighbours.forEach(neighbour -> {
+                if (!neighbour.isVisited) {
+                    neighbour.parent = currentNode;
+                    neighbour.isVisited = true;
+                    queue.add(neighbour);
+                }
+            });
+        }
+    }
+
+    public void BFSForShortPathSpecific(GraphNodeList nodeFrom, GraphNodeList nodeTo) {
+        LinkedList<GraphNodeList> queue = new LinkedList<>();
+        queue.add(nodeFrom);
+        while (!queue.isEmpty()) {
+            GraphNodeList currentNode = queue.remove(0);
+            currentNode.isVisited = true;
+            if (currentNode.equals(nodeTo)) {
+                System.out.print("Path from " + nodeFrom.name + " to " + nodeTo.name + " :");
+                pathPrintSpecific(currentNode);
+                //pathPrint(currentNode);
+                break;
+            }
             currentNode.neighbours.forEach(neighbour -> {
                 if (!neighbour.isVisited) {
                     neighbour.parent = currentNode;
