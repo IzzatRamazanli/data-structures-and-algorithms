@@ -1,5 +1,7 @@
 package com.izzat.ds.lists.arraylist;
 
+import com.izzat.ds.lists.Employee;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

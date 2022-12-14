@@ -1,4 +1,4 @@
-package com.izzat.ds.lists.arraylist;
+package com.izzat.ds.lists;
 
 public record Employee(int id, String firstName, String lastName) {
     @Override
