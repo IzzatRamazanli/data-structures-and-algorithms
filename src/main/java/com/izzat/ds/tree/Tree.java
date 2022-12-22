@@ -8,6 +8,10 @@ public class Tree {
         else root.insert(value);
     }
 
+    public void traverseInOrder() {
+        if (root != null) root.traverseInOrder();
+    }
+
     @Override
     public String toString() {
         return "Tree{root=%s}".formatted(root);

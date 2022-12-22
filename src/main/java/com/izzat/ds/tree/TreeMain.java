@@ -12,6 +12,6 @@ public class TreeMain {
         integerTree.insert(26);
         integerTree.insert(22);
         integerTree.insert(32);
-        System.out.println(integerTree);
+        integerTree.traverseInOrder();
     }
 }
