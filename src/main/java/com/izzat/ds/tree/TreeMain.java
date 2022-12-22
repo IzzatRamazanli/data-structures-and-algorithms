@@ -13,5 +13,11 @@ public class TreeMain {
         integerTree.insert(22);
         integerTree.insert(32);
         integerTree.traverseInOrder();
+        System.out.println();
+        System.out.println(integerTree.get(27));
+        System.out.println(integerTree.get(13));
+
+        System.out.println(integerTree.min());
+        System.out.println(integerTree.max());
     }
 }
